@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Web-Page (HTML & CSS)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="containar">
+        <div class="logo">
+           <h2>VP</h2>
+        </div>
+        <ul class="navbar">
+            <li>Home</li>
+            <li>Our Services</li>
+            <li>About Us</li>
+            <li>Contact Us</li>
+            <input type="search" name="search" id="" >
+            <input type="button" value="Search">
+        </ul>
+    </div>
+    <div id="Section1" class="containar1">
+        <h1>Introduction</h1>
+    </div>
+    <div id="Section2" class="containar2">
+        <h1>Our Services</h1>
+    </div>
+    <div id="Section3" class="containar3">
+        <h1>About Us</h1>
+    </div>
+    
+    <footer>
+        <span>Created By <a href="#">Vijay Prakash</a> |  ©<span id="year"></span> <script>document.getElementById("year").innerHTML = new Date().getFullYear();</script> All rights reserved.</span>
+    </footer>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-sharp fa-solid fa-arrow-up" style="font-size: 30px;"></i></button>
+     <script>
+        let mybutton = document.getElementById("myBtn");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+     </script>
+</body>
+</html>
